@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_rx_and_retrofit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.r.rxjj.test.RxAndRetrofitActivity">
+    <Button
+        android:id="@+id/bt_rx"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="请求重连"
+        android:textSize="12sp"
+        android:textColor="#f00"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/tv"
+        android:layout_below="@+id/bt_rx"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="......"
+        android:gravity="center"
+        />
+</RelativeLayout>

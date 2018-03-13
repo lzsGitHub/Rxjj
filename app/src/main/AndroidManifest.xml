@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.r.rxjj">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".test.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".test.BannerActivity">
+        </activity>
+        <activity android:name=".test.MiniBannerActivity">
+        </activity>
+        <activity android:name=".test.RxAndRetrofitActivity">
+        </activity>
+        <activity android:name=".test.RxJavaFixRetrofitActivity">
+        </activity>
+        <activity android:name=".test.RxRetrofitCallBackActivity">
+        </activity>
+        <activity android:name=".test.DataBindingActivity">
+        </activity>
+        <activity android:name=".test.ViewTestActivity">
+        </activity>
+        <activity android:name=".test.TestViewActivity">
+        </activity>
+        <activity android:name=".test.TestPicViewActivity">
+        </activity>
+        <activity android:name=".test.TestPathActivity">
+        </activity>
+        <activity android:name=".test.HeartActivity">
+        </activity>
+        <activity android:name=".test.PathTestActivity">
+        </activity>
+    </application>
+
+</manifest>

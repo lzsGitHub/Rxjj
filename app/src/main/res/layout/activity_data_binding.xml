@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="content"
+            type="String"/>
+
+        <variable
+            name="enabled"
+            type="boolean"/>
+
+        <variable
+            name="user"
+            type="com.example.r.rxjj.entity.User"/>
+
+        <variable
+            name="t1"
+            type="String"/>
+
+        <variable
+            name="t2"
+            type="String"/>
+
+        <variable
+            name="t3"
+            type="String"/>
+
+        <variable
+            name="event"
+            type="com.example.r.rxjj.listener.EventListener"/>
+
+        <variable
+            name="data"
+            type="com.example.r.rxjj.entity.Test"/>
+
+        <import type="com.example.r.rxjj.entity.Utils"/>
+    </data>
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_data_binding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.r.rxjj.test.DataBindingActivity">
+
+        <Button
+            android:id="@+id/bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="@{enabled}"
+            android:text="@{content}"
+            />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.name}"
+            />
+
+        <Button
+            android:id="@+id/bt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="@{enabled}"
+            android:onClick="@{event.click1}"
+            android:text="@{t1}"
+            />
+
+        <Button
+            android:id="@+id/bt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="@{enabled}"
+            android:onClick="@{event.click2}"
+            android:text="@{t2}"
+            />
+
+        <Button
+            android:id="@+id/bt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="@{enabled}"
+            android:onClick="@{()->event.click3(t1)}"
+            android:text="@{t3}"
+            />
+
+        <Button
+            android:id="@+id/bt_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{Utils.getName(user)}"
+            />
+
+        <com.example.r.rxjj.view.MyView
+            android:id="@+id/my_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>
