@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG="Rx";
     private RecyclerView mRc;
     private BaseRecyclerAdapter mBaseRecyclerAdapter;
-    private String[] interfaceRx={"网络请求超时","模拟网络请求轮询","网络请求嵌套回调","dataBinding"};
+    private String[] interfaceRx={"网络请求超时","模拟网络请求轮询","网络请求嵌套回调","dataBinding","光能使者"};
     private Void[] mVoids=new Void[2];
     private TextView mTt;
     private Context mContext;
@@ -72,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case "dataBinding":
                         toBanner(DataBindingActivity.class);
+                        break;
+                    case "光能使者":
+                        toBanner(ViewActivity.class);
                         break;
                     default:
                         break;
